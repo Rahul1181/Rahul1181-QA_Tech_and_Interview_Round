@@ -19,7 +19,7 @@ public class ReverseString {
 
 
         //3rd method (Recursion)
-        System.out.println("String Reverse is " + reverseStr(name));
+        System.out.println("String Reverse is " + reverseStr("IBM"));
     }
     //3rd method to reverse a String (Recursion)
     public static String reverseStr(String fullname){
@@ -28,7 +28,7 @@ public class ReverseString {
             return fullname;
         }
         //Everytime function is called it will capture 1 element and add it with 0th element and the string is reducing at every iteration
-        return reverseStr(fullname.substring(1))+ fullname.charAt(0);
+        return reverseStr(fullname.substring(1)) + fullname.charAt(0);
     }
     
 }
