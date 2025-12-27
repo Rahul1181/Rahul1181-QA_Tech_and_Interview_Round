@@ -5,9 +5,9 @@ public class SwapNumbers {
     public static void main(String[] args){
         int num1 =42;
         int num2 = 49;
-        int sum = num1 + num2;
-        num1 = sum - num1;
-        num2 = sum - num2;
+        num1 = num1 + num2;
+        num2 = num1 - num2;
+        num1 = num1 - num2;
         System.out.println("New values of Num1: " + num1);
         System.out.println("New values of Num2: " + num2);
 
