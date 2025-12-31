@@ -17,14 +17,14 @@ Ans:
 2. Find the Css of the **Amazon Title**?
 Ans: 
 - By ID: `#nav-logo-sprites`
-- By Class - 
-- By Tag and Attribute - `input[name='email']`
-- By Multiple Attributes - `input[type='text'][placeholder='Enter Name']`
-- Parent → Child - `div.form-group > input`
-- Descendant - `div.form-group input`
-- Starts / Ends / Contains - `input[id^='user']`   /* starts with */  
-`input[id$='name']`     /* ends with */
-`input[id*='login']`     /* contains */
+- By Class - `a.nav-logo-link.nav-progressive-attribute`
+- By Tag and Attribute - `a[aria-label='Amazon.in']`
+- By Multiple Attributes - `a[href='/ref=nav_logo'][aria-label='Amazon.in']`
+- Parent → Child - `a.nav-logo-link > span.nav-logo-locale`
+- Descendant - `a.nav-logo-link > span#logo-ext`
+- Starts / Ends / Contains - `a[class^='nav-logo']`   /* starts with */  
+`span[class$='logo-locale']`     /* ends with */
+`a[href*='nav_logo']`     /* contains */
 
 3. Find the Xpath for **Shopping Item**?
 - Partial Text - `//span[contains(text(),'in')]`
