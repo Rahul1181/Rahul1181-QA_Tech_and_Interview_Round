@@ -8,14 +8,10 @@
 ```
 Ans: 
 - By Attribute - `//a[@id='nav-logo-sprites']`  
-- Using contains() - `//a[contains(@class, 'nav-logo-link nav-progressive-attribute')]`   
+- Using contains() - `//a[contains(@class, 'nav-logo-link')]`   
 - Using starts-with() - `//a[starts-with(@class,'nav-logo')]`   
 - By Text - `//span[text()='.in']`   
-- By Multiple Attributes - 
-- Partial Text - //a[contains(text(),'Login')]
-- Indexing - (//input[@type='text'])[2]
-- Axes - `//label[text()='Email']/following-sibling::input`   
-`//input[@id='email']/ancestor::form`
+- By Multiple Attributes - `//a[@id='nav-logo-sprites' and @aria-label='Amazon.in']`
 
 
 2. Find the Css of the **Amazon Title**?
@@ -29,6 +25,12 @@ Ans:
 - Starts / Ends / Contains - `input[id^='user']`   /* starts with */  
 `input[id$='name']`     /* ends with */
 `input[id*='login']`     /* contains */
+
+3. Find the Xpath for **Shopping Item**?
+- Partial Text - `//span[contains(text(),'in')]`
+- Indexing - `(//input[@type='text'])[2]`
+- Axes - `//div[text()='Revamp']/following-sibling::h2`   
+`//input[@id='email']/ancestor::form`
 
 
 
