@@ -27,8 +27,7 @@ public class AppTest {
     @Test
     public void snapdeal() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-
-        //driver.findElement(By.xpath("//div[text()=\"Women's Fashion\"]"));
+        //Here js.executeScript will return a object which will type cast to WebElement interface and get stored in WomenFashion
         WebElement womensFashion = (WebElement) js.executeScript(
                 "return [...document.querySelectorAll('div')]" +
                         ".find(el => el.textContent.trim() === \"Women's Fashion\");");
