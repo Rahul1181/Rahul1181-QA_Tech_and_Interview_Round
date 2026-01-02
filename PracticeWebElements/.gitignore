@@ -30,3 +30,5 @@ target/
 .idea/
 *.iml
 .mvn/
+*.xml
+*.vcs
