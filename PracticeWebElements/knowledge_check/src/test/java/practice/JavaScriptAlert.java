@@ -21,14 +21,16 @@ public class JavaScriptAlert {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.get("https://the-internet.herokuapp.com/?utm_source=chatgpt.com");
         driver.manage().window().maximize();
+        //Opening the URL
+        driver.get("https://the-internet.herokuapp.com/?utm_source=chatgpt.com");
+        //Clcking on the JavaScript Alert
+        driver.findElement(By.xpath("//a[contains(text(),'JavaScript Alerts')]")).click();
 
     }
-    //Handle JavaScript Alerts confirm
+    //Handle JavaScript Alerts Accept
     @Test
-    public void javaScriptAlert(){
-        driver.findElement(By.xpath("//a[contains(text(),'JavaScript Alerts')]")).click();
+    public void jsAlertAccept(){
         driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();
 
         //Switch to Alert
@@ -40,7 +42,33 @@ public class JavaScriptAlert {
         alert.accept();
 
     }
-    
+    //Handle JavaScript Alerts confirm
+    @Test
+    public void jsAlertConfirm() throws InterruptedException {
+        driver.findElement(By.xpath("//button[text()='Click for JS Confirm']")).click();
+        //Switch to Alert
+        Alert alert = driver.switchTo().alert();
+
+        //Get the Alert text and assert it
+        String confirmAlertText = alert.getText();
+        System.out.println(confirmAlertText);
+        Assert.assertEquals(confirmAlertText, "I am a JS Confirm", "Alert Mismatch");
+
+        //Click on Cancel
+        alert.dismiss();
+        String dismissText = driver.findElement(By.cssSelector("#result")).getText();
+        Assert.assertEquals(dismissText, "You clicked: Cancel", "Accept Text Mismatch");
+        Thread.sleep(1000);
+
+        //click on the JS confirm button
+        driver.findElement(By.xpath("//button[text()='Click for JS Confirm']")).click();
+        alert.accept();
+        String accpetText = driver.findElement(By.cssSelector("#result")).getText();
+        Assert.assertEquals(accpetText, "You clicked: Ok", "Dismiss Text Mismatch");
+        Thread.sleep(500);
+
+    }
+
 
     @AfterClass
     public void tearDown() {
