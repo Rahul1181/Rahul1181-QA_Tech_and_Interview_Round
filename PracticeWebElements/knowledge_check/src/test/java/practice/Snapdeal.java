@@ -9,11 +9,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class AppTest {
+public class Snapdeal {
     public static WebDriver driver;
 
     @BeforeClass
@@ -23,8 +24,11 @@ public class AppTest {
         driver.get("https://www.snapdeal.com/");
 
     }
-
     @Test
+    public void alert(){
+        
+    }
+    @Test(enabled =false)
     public void snapdeal() {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         //Here js.executeScript will return a object which will type cast to WebElement interface and get stored in WomenFashion
@@ -37,8 +41,9 @@ public class AppTest {
         js.executeScript(
                 "document.body.addEventListener(" +
                         "'mouseout', e => e.stopPropagation(), true);");
-        driver.manage().timeouts()
-                .implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); 
+        
+
         WebElement subMenuItem = driver.findElement(By.xpath("//div[contains(text(),'Kurtas & Kurtis')]"));
 
         subMenuItem.click();
