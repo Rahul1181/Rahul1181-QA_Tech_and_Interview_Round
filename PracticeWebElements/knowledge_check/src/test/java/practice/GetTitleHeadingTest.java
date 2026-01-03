@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class GetTitleHeading {
+public class GetTitleHeadingTest {
     private static WebDriver driver;
     @BeforeClass
     public void setup(){
