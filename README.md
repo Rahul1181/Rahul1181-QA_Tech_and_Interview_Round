@@ -28,4 +28,7 @@
 3. Explain the Page Object Model (POM) structure and why you use an object repository.
 4. How do you achieve parallel execution of tests using TestNG or Maven?
 5. How do you integrate your test automation into a CI/CD pipeline (e.g., Jenkins)?
-6. Describe your approach to handling flaky tests and the debugging steps you take when a test fails in the CI environment. 
+6. Describe your approach to handling flaky tests and the debugging steps you take when a test fails in the CI environment.
+
+## PracticeWeb Elements
+1. You will get hands on experience on how to handle element?
