@@ -12,7 +12,7 @@ public class WaitUtils {
 
     public static WebDriver driver;
     WebDriverWait wait;
-
+    //This allows the WaitUtils class to use the same browser instance that the test is running on.
     public WaitUtils(WebDriver driver) {
         this.driver = driver;
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));

@@ -28,8 +28,9 @@ public class GetTitleHeadingTest {
     @Test
     public void checkHeading(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        WebElement heading = driver.findElement(By.xpath("//h1[@class='heading']"));
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[@class='heading']")));
+        WebElement heading = driver.findElement(By.xpath("//h1[@class='heading']"));
+
         
         String getHeading = heading.getText();
         System.out.println("WebSite heading: "+ getHeading);
