@@ -32,3 +32,4 @@ target/
 .mvn/
 *.xml
 *.vcs
+launch.json
