@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "reverseTheString",
+            "request": "launch",
+            "mainClass": "Core_Java_Coding_Questions.reverseTheString",
+            "projectName": "QA_Tech_and_Interview_Round_6769f0ae"
+        },
+        {
+            "type": "java",
             "name": "Current File",
             "request": "launch",
             "mainClass": "${file}"

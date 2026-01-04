@@ -22,8 +22,6 @@ public class Basic_AuthTest {
         driver.manage().window().maximize();
         driver.get("https://the-internet.herokuapp.com/?utm_source=chatgpt.com");
 
-
-
     }
     //Check the basic Authentication
     @Test(priority = 1)
